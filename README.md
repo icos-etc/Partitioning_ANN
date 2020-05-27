@@ -14,8 +14,8 @@ The code has been used for a research paper and it is not designed for direct ap
 - in the “\Test_output\MaxDriver” subfolder (automatically created) a file named CC-SSS_cann_all_tn_ns_MaxD_2v0.mat (where CC-SSS is the official site code) includes two matrixes named OutGPP_NNcust and OutReco_NNcust with the GPP and RECO estimations of the 25 ANNs.
 - in the \Test_output\MaxDriver\Selected_2” subfolder (also automatically created) a file named CC-SSS_selected_anns.mat (where CC-SSS is the official site code) includes two matrixes named GPP_ann_MaxD_gf and RECO_ann_MaxD_gf with the GPP and RECO estimations of the 5 finally selected ANNs. In the same folder a .csv file with the final output and the timestamps as in FLUXNET2015 is also created.
 
-### Limitations in case of gaps in the drivers
-Note that the ANNs need a value for each of the driver to calculate the predicted output. For this reason, gaps in the input variables used will generate gaps in the predicted GPP and RECO. This is particularly relevant for the WD variable that is not gapfilled in FLUXNET2015.
+### Limitations
+Note that the code was prepared for a paper and coparison study. For this reason it has strong requirements in terms of data availability, percentage of gaps, distribution of data daytime and nighttime. In addition, the ANNs need a value for each of the driver to calculate the predicted output. For this reason, gaps in the input variables used will generate gaps in the predicted GPP and RECO and if a needed driver is completely missing the method will not produce any output. This is particularly relevant for the WD variable that is not gapfilled in FLUXNET2015.
 
 ## Example data
 The code is provided with an example of data in order to try and test. These data are provided only and exclusively for the test of the code and can not be used in other applications. Refer to the FLUXNET2015 collection (fluxdata.org) if you are interested to the data.
