@@ -75,8 +75,8 @@ for n_s = 1:numel(Sites2elab)
     clear OutReco_NNcust_NT OutNEE_tset_NNcust_NT
     clear OutReco_NNcust OutGPP_NNcust OutNEE_tset_NNcust
     clear OutReco_NNcust_DT2t OutGPP_NNcust_DT2t OutNEE_tset_NNcust_DT2t           
-    if exist([main_path 'Test\MaxDriver\' s_name '_cann_all_tn_ns_MaxD_2v0.mat'], 'file') > 0           
-       load([main_path 'Test\MaxDriver\' s_name '_cann_all_tn_ns_MaxD_2v0.mat'])
+    if exist([path_4_output s_name '_cann_all_tn_ns_MaxD_2v0.mat'], 'file') > 0           
+       load([path_4_output s_name '_cann_all_tn_ns_MaxD_2v0.mat'])
     else
        ModelsStruct = struct;       
        OutReco_NNcust = NaN(size(X2,1),25);
@@ -172,7 +172,7 @@ for n_s = 1:numel(Sites2elab)
 
                     if numel(find(sum(tRad_data == 0,2)==2 & sum(isfinite([tX2 tYtr]),2) == size([tX2 tYtr],2))) > (365.*tstep)/(48)               
 
-                        % procressing the site-year if n°of trained net is
+                        % procressing the site-year if nÂ°of trained net is
                         % lower than 25
                         if tab_n_c < 25
                             % if numebr of processed net if 0, initialize
