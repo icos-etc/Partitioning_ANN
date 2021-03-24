@@ -127,8 +127,8 @@ for l = 1:numel(list_of_files)
     load([main_path 'Input\' list_of_files(1).name(1:2) '-' list_of_files(1).name(4:6) '_input']);
     dataISO=data(:,[1:2]);
     clear data data_header
-    RECO_ANN=nanmean(RECO_ann_MaxD_gf,2);
-    GPP_ANN=nanmean(GPP_ann_MaxD_gf,2);
+    RECO_ANN=nanmean(RECO_ann_MaxD_gf(1:size(dataISO,1),:),2);
+    GPP_ANN=nanmean(GPP_ann_MaxD_gf(1:size(dataISO,1),:),2);
     output_fin=[dataISO GPP_ANN RECO_ANN];
     % to avoind in the csv -0
     output_fin(output_fin==0)=0;
